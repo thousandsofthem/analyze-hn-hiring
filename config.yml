@@ -1,0 +1,67 @@
+db:
+  adapter: postgresql
+  encoding: unicode
+  pool: 10
+  host: localhost
+  username: pocketmoon
+  password: ""
+  database: hn_hiring
+
+
+# x | y | z - if any of these words encountered
+# case-insensitive
+keywords:
+  - REMOTE
+  - ONSITE
+  - react
+  - angular | AngularJS
+  - node | nodejs | node.js | javascript | react | angular | AngularJS
+  - ruby | rails | sinatra
+  - elixir
+  - phoenix
+  - elixir | phoenix
+  - Android
+  - ios | iphone
+  - java
+  - Scala
+  - Python | Celery | Django
+  - Go | golang
+  - postgres | PostgreSQL
+  - mysql
+  - cassandra
+  - Erlang
+  - React Native
+  - MongoDB | Mongo
+  - RabbitMQ
+  - Redis
+  - Objective-C
+  - C
+  - C++
+  - Haskell
+  - Docker
+  - PHP
+  - nosql
+
+
+
+
+
+# https://news.ycombinator.com/item?id=ID
+# Ask HN: Who is hiring? (July 2015) thread
+pages:
+  - 11202954 # (March 2016)
+  - 11012044 # February 2016
+  - 10822019 # (January 2016)
+  - 10655740 # December 2015)
+  - 10492086 # (November 2015)
+  - 10311580 # (October 2015
+  - 10152809 # (September 2015)
+  - 9996333 #  (August 2015)
+  - 9812245 # July 2015
+  - 9639001 # (June 2015)
+  - 9471287 #  (May 2015)
+  - 9303396 # (April 2015)
+  - 9127232 # March 2015)
+  - 8980047 # (February 2015)
+
+
