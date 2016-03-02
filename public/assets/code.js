@@ -1,23 +1,27 @@
 $(document).ready(function () {
-  drawChart(window.points);
 
 
-  $( "#show-all" ).click(function(e) {
+  drawChart("#container-1", 'Term popularity by date', "", window.points);
+  drawChart("#container-2", 'Term popularity by date (normalized)', "%", window.points_normalized);
+
+  $( ".show-all" ).click(function(e) {
     e.preventDefault();
-    var chart = $('#container').highcharts();
+    var chart = $($(this).data('target')).highcharts();
     for (i in chart.series) {
       var name = chart.series[i].name;
-      if (name != "ONSITE" && name != "REMOTE" && name != "TOTAL") {
+      if (name != "ONSITE" && name != "REMOTE" && name != "TOTAL" && !chart.series[i].visible) {
         chart.series[i].show();
       }
     }
   });
 
-  $( "#hide-all" ).click(function(e) {
+  $( ".hide-all" ).click(function(e) {
     e.preventDefault();
-    var chart = $('#container').highcharts();
+    var chart = $($(this).data('target')).highcharts();
     for (i in chart.series) {
-      chart.series[i].hide();
+      if (chart.series[i].visible) {
+        chart.series[i].hide();
+      }
     }
   });
 
@@ -25,7 +29,7 @@ $(document).ready(function () {
 });
 
 
-function drawChart(points) {
+function drawChart(container, title, suffix, points) {
   var series = [];
   var v;
   for (k in points) {
@@ -46,16 +50,16 @@ function drawChart(points) {
     series.push(serie);
   }
 
-  $('#container').highcharts({
+  $(container).highcharts({
     chart: {
       height: $(document).height() - 50
     },
     title: {
-        text: 'Term popularity by date'
+        text: title
     },
     tooltip: {
         shared: true,
-      //  valueSuffix: ''
+        valueSuffix: suffix
     },
     xAxis: {
         type: 'datetime'
