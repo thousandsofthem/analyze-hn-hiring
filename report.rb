@@ -11,7 +11,7 @@ ActiveRecord::Base.logger.level = 1
 ActiveRecord::Base.establish_connection(CONFIG["db"])
 Time.zone = "UTC"
 
-lines = Keyword.all.order("date ASC").to_a
+lines = Keyword.all.order("date ASC, keyword ASC").to_a
 
 jsdata = {}
 lines.map do |line|

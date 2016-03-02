@@ -14,15 +14,17 @@ keywords:
   - REMOTE
   - ONSITE
   - react | reactjs
-  - angular | AngularJS
+  - angular | AngularJS | Angular2
   - node | nodejs | node.js | javascript | react | reactjs| angular | AngularJS
   - ruby | rails | sinatra
   - elixir
   - phoenix
+  - Julia
   - elixir | phoenix
   - Android
   - ios | iphone
   - java
+  - C# | ASP.NET | .NET | mono
   - Scala
   - Python | Celery | Django
   - Go | golang
@@ -33,6 +35,9 @@ keywords:
   - React Native
   - MongoDB | Mongo
   - RabbitMQ
+  - Hadoop
+  - Spark
+  - ElasticSearch
   - Redis
   - Objective-C
   - C
@@ -59,9 +64,9 @@ pages:
   - 9996333 #  (August 2015)
   - 9812245 # July 2015
   - 9639001 # (June 2015)
-  - 9471287 #  (May 2015)
+  - 9471287 # (May 2015)
   - 9303396 # (April 2015)
-  - 9127232 # March 2015)
+  - 9127232 # (March 2015)
   - 8980047 # (February 2015)
   - 8822808 # (January 2015)
   - 8681040 # (December 2014)
@@ -69,24 +74,34 @@ pages:
   - 8394339 # (October 2014)
   - 8252715 # (September 2014)
   - 8120070 # (August 2014)
-  - 7970366 #(July 2014)
+  - 7970366 # (July 2014)
   - 7829042 # (June 2014)
-  - 7679431 #  (May 2014)
-  - 7507765 #(April 2014)
+  - 7679431 # (May 2014)
+  - 7507765 # (April 2014)
   - 7324236 # (March 2014)
   - 7162197 # (February 2014)
   - 6995020 # (January 2014)
-  - 6827554 #(December 2013)
-  - 6653437 #  (November 2013)
+  - 6827554 # (December 2013)
+  - 6653437 # (November 2013)
   - 6475879 # (October 2013)
   - 6310234 # (September 2013)
-  - 6139927 #  (August 2013)
-  - 5970187 #  (July 2013)
-  - 5803764 #(June 2013)
+  - 6139927 # (August 2013)
+  - 5970187 # (July 2013)
+  - 5803764 # (June 2013)
   - 5637663 # (May 2013)
   - 5472746 # (April 2013)
   - 5304169 # (March 2013)
-  - 5150834 #  (February 2013)
+  - 5150834 # (February 2013)
   - 4992617 # (January 2013)
-#
+  - 4857714 # (December 2012)
+  - 4727241 # (November 2012)
+  - 4596375 # (October 2012)
+  - 4463689 # (September 2012)
+  - 4323597 # (August 2012)
+  - 4184755 # (July 2012)
+  - 4053076 # (June 2012)
+  - 3913997 # (May 2012)
+  - 3783657 # (April 2012)
+  - 3652041 # (March 2012)
+  - 3537881 # (February 2012)
   - 3412900 #(January 2012)
