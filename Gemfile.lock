@@ -23,6 +23,7 @@ GEM
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
     pg (0.18.4)
+    rack (1.6.4)
     thread_safe (0.3.5)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
@@ -34,6 +35,7 @@ DEPENDENCIES
   activerecord (~> 4.2.5)
   nokogiri
   pg
+  rack
 
 BUNDLED WITH
    1.11.2

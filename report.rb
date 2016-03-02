@@ -19,7 +19,7 @@ lines.map do |line|
   jsdata[line.keyword] << [line.date.to_i * 1000, line.count]
 end
 
-fname = File.join(File.dirname(__FILE__), "assets/points.js")
+fname = File.join(File.dirname(__FILE__), "public/assets/points.js")
 File.write fname, "window.points = " + jsdata.to_json
 
 
