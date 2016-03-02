@@ -53,6 +53,10 @@ function drawChart(points) {
     title: {
         text: 'Term popularity by date'
     },
+    tooltip: {
+        shared: true,
+      //  valueSuffix: ''
+    },
     xAxis: {
         type: 'datetime'
     },
