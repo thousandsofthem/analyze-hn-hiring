@@ -43,14 +43,12 @@ CONFIG["pages"].each do |page_id|
     end
     keywords_normalized = kws.join(", ")
     store_stats(date, keywords_normalized, ids.count)
-    puts "#{keywords_normalized.ljust(60, " ")} #{ids.count.to_s.rjust(4, " ")} comments"
+    puts "#{keywords_normalized.ljust(70, " ")} #{ids.count.to_s.rjust(4, " ")} comments"
   end
 
 
   puts "\n"
 end
-
-
 
 
 
