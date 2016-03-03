@@ -13,8 +13,9 @@ db:
 keywords:
   - REMOTE
   - ONSITE
-  - react | reactjs
+  - react | react.js | reactjs
   - angular | AngularJS | Angular2
+  - Ember | Ember.js | Emberjs
   - node | nodejs | node.js | javascript | react | reactjs| angular | AngularJS
   - ruby | rails | sinatra
   - elixir
@@ -23,7 +24,7 @@ keywords:
   - elixir | phoenix
   - Android
   - ios | iphone
-  - java
+  - java | JVM
   - C# | ASP.NET | .NET | mono
   - Scala
   - Python | Celery | Django
