@@ -16,7 +16,7 @@ keywords:
   - react | react.js | reactjs
   - angular | AngularJS | Angular2
   - Ember | Ember.js | Emberjs
-  - node | nodejs | node.js | javascript | react | reactjs| angular | AngularJS
+  - node | nodejs | node.js | javascript | react | reactjs| angular | AngularJS | ES6
   - ruby | rails | sinatra
   - elixir
   - phoenix
@@ -44,7 +44,7 @@ keywords:
   - Redis
   - Objective-C
   - C
-  - C++
+  - C++ C++11
   - Haskell
   - Docker
   - PHP
@@ -57,6 +57,7 @@ keywords:
 # https://news.ycombinator.com/item?id=ID
 # Ask HN: Who is hiring? (July 2015) thread
 pages:
+  - 11814828 # June 2016
   - 11611867 # May 2016
   - 11405239 # April 2016
   - 11202954 # (March 2016)
