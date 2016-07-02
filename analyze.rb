@@ -17,6 +17,7 @@ puts "records in db: #{Keyword.count}"
 
 puts "pages to check: #{CONFIG["pages"].count}"
 
+`rm ./cache/#{CONFIG["pages"].first.to_i}`
 
 CONFIG["pages"].each do |page_id|
 
