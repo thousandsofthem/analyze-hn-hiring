@@ -14,8 +14,9 @@ keywords:
   - REMOTE
   - ONSITE
   - react | react.js | reactjs
-  - angular | AngularJS | Angular2
+  - angular | AngularJS | Angular.JS | Angular2
   - Ember | Ember.js | Emberjs
+  - Vue | Vuejs | Vue.js
   - node | nodejs | node.js | javascript | react | reactjs| angular | AngularJS | ES6
   - ruby | rails | sinatra
   - elixir
@@ -57,6 +58,7 @@ keywords:
 # https://news.ycombinator.com/item?id=ID
 # Ask HN: Who is hiring? (July 2015) thread
 pages:
+  - 13080280 # December 2016
   - 12846216 # Nov 2016
   - 12627852 # Oct 2016
   - 12405698 # September 2016
