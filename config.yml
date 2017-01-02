@@ -11,53 +11,110 @@ db:
 # x | y | z - if any of these words encountered
 # case-insensitive
 keywords:
-  - REMOTE
-  - ONSITE
-  - react | react.js | reactjs
-  - angular | AngularJS | Angular.JS | Angular2
-  - Ember | Ember.js | Emberjs
-  - Vue | Vuejs | Vue.js
-  - node | nodejs | node.js | javascript | react | reactjs| angular | AngularJS | ES6
-  - ruby | rails | sinatra
-  - elixir
-  - phoenix
-  - Julia
-  - elixir | phoenix
-  - Android
-  - ios | iphone
-  - java | JVM
-  - C# | ASP.NET | .NET | mono
-  - Scala
-  - Python | Celery | Django
-  - Go | golang
-  - golang
-  - r
-  - postgres | PostgreSQL
-  - mysql
-  - cassandra
-  - Erlang
-  - React Native
-  - MongoDB | Mongo
-  - RabbitMQ
-  - Hadoop
-  - Spark
-  - ElasticSearch
-  - Redis
-  - Objective-C
-  - C
-  - C++ C++11
-  - Haskell
-  - Docker
-  - PHP
-  - nosql
-
-
-
+  ONSITE:
+    - REMOTE
+  ONSITE:
+    - ONSITE
+  React:
+    - react
+    - react.?js
+  Angular:
+    - angular
+    - angular2
+    - angular.?js
+  Ember:
+    - ember
+    - ember.?js
+  Vue:
+    - vue
+    - vue2
+    - vue.?js
+  Node:
+    - node
+    - node.?js
+    - javascript
+    - react
+    - angular
+    - ES6
+  Rails:
+    - ruby|sinatra|rails
+  Elixir:
+    - elixir
+    - Elixir.*Phoenix
+  Julia:
+    - Julia
+  Android:
+    - Android
+  iOS:
+    - ios
+    - iphone
+  Java:
+    - java
+    - JVM
+  'C#':
+    - C#
+    - ASP.NET
+    - .NET
+    - mono
+  Azure:
+    - Azure
+  Scala:
+    - Scala
+  Python:
+    - Python|Celery|Django
+  Go:
+    - Go
+    - golang
+  R:
+    - r
+  PostgreSQL:
+    - PostgreSQL
+    - postgres
+  MySQL:
+    - mysql
+  Cassandra:
+    - cassandra
+  Erlang:
+    - Erlang
+  ReactNative:
+    - React\s*Native
+  Mongo:
+    - Mongo
+    - MongoDB
+  RabbitMQ:
+    - RabbitMQ
+  Hadoop:
+    - Hadoop
+  Spark:
+    - Spark
+  ElasticSearch:
+    - Elastic\s*Search
+  Redis:
+    - Redis
+  ObjectiveC:
+    - Objective[\s_\-]*C
+  C:
+    - c
+  C++:
+    - c\+\+\d*
+  Haskell:
+    - Haskell
+  Docker:
+    - Docker
+  PHP:
+    - PHP
+  NoSQL:
+    - nosql
+  Kotlin:
+    - Kotlin
+  Swift:
+    - Swift
 
 
 # https://news.ycombinator.com/item?id=ID
 # Ask HN: Who is hiring? (July 2015) thread
 pages:
+  - 13301832 # Jan 2017
   - 13080280 # December 2016
   - 12846216 # Nov 2016
   - 12627852 # Oct 2016

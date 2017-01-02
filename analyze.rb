@@ -34,17 +34,16 @@ CONFIG["pages"].each do |page_id|
 
   clean_stats(date)
   store_stats(date, "TOTAL", comments.count)
-  CONFIG["keywords"].each do |kwlist|
+  CONFIG["keywords"].each do |title, kwlist|
     ids = []
-
-    kws = kwlist.split("|").map(&:strip).map(&:downcase).sort
-    r = Regexp.new('\W(' + kws.join("|") + ')\W', "i")
-    comments.each_with_index do |comment, idx|
-      ids << idx if comment.match(r)
+    kwlist.each do |kw|
+      r = Regexp.new('\W(' + kw + ')\W', "i")
+      comments.each_with_index do |comment, idx|
+        ids << idx if comment.match(r) && !ids.include?(idx)
+      end
     end
-    keywords_normalized = kws.join(", ")
-    store_stats(date, keywords_normalized, ids.count)
-    puts "#{keywords_normalized.ljust(70, " ")} #{ids.count.to_s.rjust(4, " ")} comments"
+    store_stats(date, title, ids.count)
+    #puts "#{title.ljust(70, " ")} #{ids.count.to_s.rjust(4, " ")} comments"
   end
 
 
