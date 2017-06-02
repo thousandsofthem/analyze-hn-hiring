@@ -17,7 +17,9 @@ puts "records in db: #{Keyword.count}"
 
 puts "pages to check: #{CONFIG["pages"].count}"
 
-`rm ./cache/#{CONFIG["pages"].first.to_i}`
+#`rm ./cache/#{CONFIG["pages"].first.to_i}`
+
+puts CONFIG["pages"].inspect
 
 CONFIG["pages"].each do |page_id|
 
@@ -45,7 +47,6 @@ CONFIG["pages"].each do |page_id|
     store_stats(date, title, ids.count)
     #puts "#{title.ljust(70, " ")} #{ids.count.to_s.rjust(4, " ")} comments"
   end
-
 
   puts "\n"
 end
