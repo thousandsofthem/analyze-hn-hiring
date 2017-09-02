@@ -5,15 +5,19 @@ def open(url)
 end
 
 
-def open_and_cache(id)
+def open_and_cache(id, page_num = 1)
   id = id.to_i
   return if id <= 0
 
-  fname = File.join(CACHE_DIR, id.to_s)
+  fname = File.join(CACHE_DIR, "#{id.to_s}-#{page_num.to_s}.html")
   if File.exists?(fname)
     File.read(fname)
   else
-    data = open("https://news.ycombinator.com/item?id=#{id}")
+    url = "https://news.ycombinator.com/item?id=#{id}"
+    if page_num > 1
+      url += "&p=#{page_num}"
+    end
+    data = open(url)
     if data.size > 0
       File.write(fname, data)
       data

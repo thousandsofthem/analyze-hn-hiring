@@ -24,29 +24,50 @@ puts CONFIG["pages"].inspect
 CONFIG["pages"].each do |page_id|
 
   puts "== checking page #{page_id} ".ljust(80, "=")
-
-  doc = Nokogiri::HTML(open_and_cache(page_id))
-  date_raw = doc.css('title').text.sub(/^.*?\(/,'').sub(/\).*/,'')
-  date = Time.zone.parse(date_raw) || raise("can not parse date")
-  puts "raw: #{date_raw}, parsed: #{date}"
-
-  # downcase - to speedup search
-  comments = doc.css(".comment-tree td.default").map { |node| node.css('.comment').text.downcase }
-  puts "comments found: #{comments.count}"
-
-  clean_stats(date)
-  store_stats(date, "TOTAL", comments.count)
-  CONFIG["keywords"].each do |title, kwlist|
-    ids = []
-    kwlist.each do |kw|
-      r = Regexp.new('\W(' + kw + ')\W', "i")
-      comments.each_with_index do |comment, idx|
-        ids << idx if comment.match(r) && !ids.include?(idx)
-      end
+  total = 0
+  stats = {}
+  date = nil
+  (1..10).each do |int_page|
+    puts "##{int_page}"
+    doc = Nokogiri::HTML(open_and_cache(page_id, int_page))
+    if int_page == 1
+      date_raw = doc.css('title').text.sub(/^.*?\(/,'').sub(/\).*/,'')
+      date = Time.zone.parse(date_raw) || raise("can not parse date")
+      puts "raw: #{date_raw}, parsed: #{date}"
+      clean_stats(date)
     end
-    store_stats(date, title, ids.count)
-    #puts "#{title.ljust(70, " ")} #{ids.count.to_s.rjust(4, " ")} comments"
+
+
+
+    # downcase - to speedup search
+    comments = doc.css(".comment-tree td.default").map { |node| node.css('.comment').text.downcase }
+    puts "comments found: #{comments.count}"
+    total += comments.count
+
+    CONFIG["keywords"].each do |title, kwlist|
+      ids = []
+      kwlist.each do |kw|
+        r = Regexp.new('\W(' + kw + ')\W', "i")
+        comments.each_with_index do |comment, idx|
+          ids << idx if comment.match(r) && !ids.include?(idx)
+        end
+      end
+      stats[title] ||= 0
+      stats[title] += ids.count
+      #store_stats(date, title, ids.count)
+      #puts "#{title.ljust(70, " ")} #{ids.count.to_s.rjust(4, " ")} comments"
+    end
+    if doc.css('a.morelink').count < 1
+      break
+    end
+  end # end int page
+
+  store_stats(date, "TOTAL", total)
+  stats.each do |k, v|
+    store_stats(date, k, v)
   end
+
+
 
   puts "\n"
 end
