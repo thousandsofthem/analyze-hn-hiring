@@ -20,6 +20,7 @@ puts "pages to check: #{CONFIG["pages"].count}"
 #`rm ./cache/#{CONFIG["pages"].first.to_i}`
 
 puts CONFIG["pages"].inspect
+use_cache = false
 
 CONFIG["pages"].each do |page_id|
 
@@ -29,7 +30,7 @@ CONFIG["pages"].each do |page_id|
   date = nil
   (1..10).each do |int_page|
     puts "##{int_page}"
-    doc = Nokogiri::HTML(open_and_cache(page_id, int_page))
+    doc = Nokogiri::HTML(open_and_cache(page_id, int_page, use_cache))
     if int_page == 1
       date_raw = doc.css('title').text.sub(/^.*?\(/,'').sub(/\).*/,'')
       date = Time.zone.parse(date_raw) || raise("can not parse date")
@@ -70,6 +71,7 @@ CONFIG["pages"].each do |page_id|
 
 
   puts "\n"
+  use_cache = true
 end
 
 

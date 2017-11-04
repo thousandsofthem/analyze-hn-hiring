@@ -5,12 +5,12 @@ def open(url)
 end
 
 
-def open_and_cache(id, page_num = 1)
+def open_and_cache(id, page_num = 1, use_cache = true)
   id = id.to_i
   return if id <= 0
 
   fname = File.join(CACHE_DIR, "#{id.to_s}-#{page_num.to_s}.html")
-  if File.exists?(fname)
+  if use_cache && File.exists?(fname)
     File.read(fname)
   else
     url = "https://news.ycombinator.com/item?id=#{id}"
