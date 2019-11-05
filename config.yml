@@ -109,12 +109,28 @@ keywords:
     - Kotlin
   Swift:
     - Swift
+  Blockchain:
+    - blockchain|blockchains
+  Kubernetes:
+    - Kubernetes
+  Full-Stack:
+    - Full[^\w]*Stack
+
 
 
 # https://news.ycombinator.com/item?id=ID
 # Ask HN: Who is hiring? (July 2015) thread
 pages:
-  - 19055166 # February 2019
+  - 21419536 # nov 2019
+  - 21126014 # oct 2019
+  - 20867123 # sept 2019
+  - 20584311 # aug 2019
+  - 20325925 # jul 2019
+  - 20083795 # jun 2019
+  - 19797594 # may 2019
+  - 19543940 # apr 2019
+  - 19281834 # mar 2019
+  - 19055166 # feb 2019
   - 18807017 # jan 2019
   - 18589702 # dec 2018
   - 18354503 # nov 2018
