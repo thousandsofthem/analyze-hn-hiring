@@ -11,13 +11,15 @@ db:
 # x | y | z - if any of these words encountered
 # case-insensitive
 keywords:
-  ONSITE:
+  REMOTE:
     - REMOTE
   ONSITE:
     - ONSITE
   React:
     - react
     - react.?js
+  Rust:
+    - rust
   Angular:
     - angular
     - angular2
@@ -38,9 +40,11 @@ keywords:
     - ES6
   Rails:
     - ruby|sinatra|rails
+    - RoR
   Elixir:
     - elixir
     - Elixir.*Phoenix
+    - LiveView
   Julia:
     - Julia
   Android:
@@ -64,6 +68,8 @@ keywords:
     - Python|Celery|Django
   Go:
     - Go
+    - golang
+  'Golang only':
     - golang
   R:
     - r
@@ -89,6 +95,7 @@ keywords:
     - Spark
   ElasticSearch:
     - Elastic\s*Search
+    - Elastic
   Redis:
     - Redis
   ObjectiveC:
@@ -121,6 +128,48 @@ keywords:
 # https://news.ycombinator.com/item?id=ID
 # Ask HN: Who is hiring? (July 2015) thread
 pages:
+  - 35773707 # may 2023
+  - 35424807 # apr
+  - 34983767 # mar
+  - 34612353 # feb
+  - 34219335 # jan 2023
+  - 33818037 # dec 2022
+  - 33422129 # nov
+  - 33068421 # oct
+  - 32677265 # sept
+  - 32306920 # aug
+  - 31947297 # jul
+  - 31582796 # jun
+  - 31235968 # may
+  - 30878761 # apr
+  - 30515750 # mar
+  - 30164271 # feb
+  - 29782099 # jan 2022
+  - 29405056 # dec 2021
+  - 29067493 # nov
+  - 28719320 # oct
+  - 28380661 # sept
+  - 28037366 # aug
+  - 27699704 # jul
+  - 27355392 # jun
+  - 27025922 # may
+  - 26661443 # apr
+  - 26304051 # mar
+  - 25989764 # feb
+  - 25632982 # jan 2021
+  - 25266288 # dec
+  - 24969524 # nov
+  - 24651639 # oct
+  - 24342498 # sept
+  - 24038520 # aug
+  - 23702122 # jul
+  - 23379196 # june
+  - 23042618 # may
+  - 22749308 # apr
+  - 22465476 # mar
+  - 22225314 # feb 2020
+  - 21936440 # jan 2020
+  - 21683554 # dec 2019
   - 21419536 # nov 2019
   - 21126014 # oct 2019
   - 20867123 # sept 2019

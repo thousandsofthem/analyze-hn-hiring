@@ -2,6 +2,8 @@ require 'rubygems'
 require 'bundler/setup'
 require "./lib/loader.rb"
 
+FORCE_UPDATE_LAST_MONTH = false
+
 
 CONFIG = YAML::load(File.open(File.join(File.dirname(__FILE__), 'config.yml')))
 CACHE_DIR = File.join(File.dirname(__FILE__), 'cache')
@@ -20,7 +22,11 @@ puts "pages to check: #{CONFIG["pages"].count}"
 #`rm ./cache/#{CONFIG["pages"].first.to_i}`
 
 puts CONFIG["pages"].inspect
-use_cache = false
+
+use_cache = true
+if FORCE_UPDATE_LAST_MONTH
+  use_cache = false
+end
 
 CONFIG["pages"].each do |page_id|
 
